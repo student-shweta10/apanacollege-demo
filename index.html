@@ -1,3 +1,378 @@
-<p>
-    hello word
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | MyApp</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="register-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="brand-section">
+
+        <div class="brand-content">
+
+            <div class="brand-logo">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>MyApp</span>
+            </div>
+
+            <div class="hero-content">
+                <span class="badge-custom">
+                    <i class="bi bi-stars"></i>
+                    Welcome to MyApp
+                </span>
+
+                <h1>
+                    Build your
+                    <span>success</span>
+                    with us.
+                </h1>
+
+                <p>
+                    Manage your work, track your progress and grow your
+                    business with our powerful dashboard.
+                </p>
+
+                <div class="feature-list">
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                        <div>
+                            <strong>Simple & Powerful</strong>
+                            <small>Everything you need in one place.</small>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div>
+                            <strong>Secure \
+                                
+                            </strong>
+                            <small>Your data is protected and private.</small>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <div>
+                            <strong>Work Faster</strong>
+                            <small>Save time and improve productivity.</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="copyright">
+                © 2026 MyApp. All rights reserved.
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="form-section">
+
+        <div class="register-card">
+
+            <div class="mobile-logo">
+                <div class="brand-logo">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>MyApp</span>
+                </div>
+            </div>
+
+            <div class="form-header">
+                <h2>Create your account</h2>
+                <p>Get started with your free account today.</p>
+            </div>
+
+
+            <!-- Social Login -->
+
+            <button type="button" class="social-btn">
+                <span class="google-icon">G</span>
+                Continue with Google
+            </button>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <!-- Registration Form -->
+
+            <form id="registerForm" novalidate>
+
+                <!-- Name -->
+
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">
+                        Full Name
+                    </label>
+
+                    <div class="input-group custom-input">
+                        <span class="input-group-text">
+                            <i class="bi bi-person"></i>
+                        </span>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="invalid-feedback">
+                        Please enter your full name.
+                    </div>
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        Email Address
+                    </label>
+
+                    <div class="input-group custom-input">
+                        <span class="input-group-text">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="mb-2">
+                    <label for="password" class="form-label">
+                        Password
+                    </label>
+
+                    <div class="input-group custom-input">
+                        <span class="input-group-text">
+                            <i class="bi bi-lock"></i>
+                        </span>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Create a strong password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="togglePassword"
+                        >
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Password Strength -->
+
+                <div class="password-strength">
+
+                    <div class="strength-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="strength-info">
+                        <span>Password strength</span>
+                        <strong id="strengthText">Weak</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-group custom-input">
+                        <span class="input-group-text">
+                            <i class="bi bi-shield-lock"></i>
+                        </span>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="toggleConfirmPassword"
+                        >
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+
+                    <div
+                        class="invalid-feedback"
+                        id="confirmPasswordError"
+                    >
+                        Passwords do not match.
+                    </div>
+                </div>
+
+
+                <!-- Terms -->
+
+                <div class="terms-box">
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="terms"
+                        >
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </label>
+
+                        <div class="invalid-feedback">
+                            You must accept the terms.
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="btn create-account-btn"
+                >
+                    <span>Create Account</span>
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+            </form>
+
+
+            <!-- Login -->
+
+            <div class="login-text">
+                Already have an account?
+                <a href="#">Sign in</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Success Modal -->
+
+<div
+    class="modal fade"
+    id="successModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content success-modal">
+
+            <div class="success-icon">
+                <i class="bi bi-check-lg"></i>
+            </div>
+
+            <h3>Account Created!</h3>
+
+            <p>
+                Your account has been successfully created.
+                Welcome to MyApp!
+            </p>
+
+            <button
+                type="button"
+                class="btn create-account-btn"
+                data-bs-dismiss="modal"
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
